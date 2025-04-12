@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+
+}
+
+body {
+    background-color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.game-container {
+    background: #f9fafb;
+    display: grid;
+    grid-template-rows: 10vh 40vh 30vh;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid #10b981;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    height: 90vh;
+    width: 70%;
+}
+
+
+.title h1 {
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*pantalla principal*/
+.player-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: yellowgreen;
+}
+
+/* casillas de jugador y computadora */
+.player-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px;
+    height: 250px;
+    background-color: #f2f2f2;
+}
+
+.choice {
+    display: grid;
+    place-items: center;
+    height: 150px;
+    width: 150px;
+    margin-top: 20px;
+    background-color: #e1e1e1;
+    border-radius: 8px;
+}
+
+.choice-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* resultado */
+#result {
+    /* margin-top: 20px; */
+    font-size: 18px;
+    color: #333;
+}
+/* #result h2 {
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+/*botones cartas*/
+.buttons-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: violet;
+}
+.game-button {
+    /* padding: 10px 20px; */
+    /* margin: 10px; */
+    border: none;
+    /* background-color: #4CAF50; */
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.game-button:hover {
+    background-color: #45a049;
+}
+
+.game-button img{
+    width: 120px;
+}
+.game-button img:hover{
+    width: 130px;
+}
+
+
+#multiplayer-section {
+    margin-top: 20px;
+    display: none;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.player-area {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.player-card {
+		width: 80%;
+	}
+
+	.choice-img {
+		width: 100px;
+		height: 100px;
+	}
+
+	h1 {
+		font-size: 1.6rem;
+	}
+}
