@@ -23,21 +23,34 @@
 			<!-- casillas de jugador y computadora -->
 			<div class="player-card">
 				<h2>Jugador</h2>
+				
 				<div id="player-choice" class="choice">
 					<img id="player-img" src="./img/Jugador.png" alt="" class="choice-img">
 				</div>
-			</div>
 
+				<div class="health-bar"> 
+					<div class="health-fill" id="health-player"></div>
+				</div>
+				<div class="round-counter" id="player-rounds">Rondas ganadas: 0</div>
+			</div>
+			
 			<!-- resultado -->
 			<div id="result">
 				<h2>¡Haz tu jugada!</h2>
 			</div>
-
+			
+			
 			<div class="player-card">
 				<h2>Computadora</h2>
+				
 				<div id="computer-choice" class="choice">
 					<img id="computer-img" src="./img/Computer.png" alt="" class="choice-img">
 				</div>
+				
+				<div class="health-bar">
+					<div class="health-fill" id="health-computer"></div>
+				</div>
+				<div class="round-counter" id="computer-rounds">Rondas ganadas: 0</div>
 			</div>
 		</div>
 
@@ -47,6 +60,11 @@
 			<button class="game-button" onclick="playerChoose('papel')"><img src="./assets/Papel.png" alt="Papel"></button>
 			<button class="game-button" onclick="playerChoose('tijera')"><img src="./assets/Tijera.png" alt="Tijera"></button>
 		</div>
+
+		<div class="controls">
+			<button id="new-game-btn">Nueva Partida</button>
+		</div>
+		
 
 
 		<!-- Para jugar online (opcional en la versión básica) -->
