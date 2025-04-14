@@ -97,6 +97,7 @@ function updateHealthBars() {
 	computerFill.classList.toggle("critical", computerHealth === 0);
 }
 
+
 function updateRoundCounters() {
 	document.getElementById("player-rounds").textContent = `Rondas ganadas: ${playerRounds}`;
 	document.getElementById("computer-rounds").textContent = `Rondas ganadas: ${computerRounds}`;

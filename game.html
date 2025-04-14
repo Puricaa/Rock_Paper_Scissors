@@ -17,21 +17,23 @@
 		<div class="title">
 			<h1>Piedra, Papel o Tijera</h1>
 		</div>
-
+		
 		<!-- Pantalla principal -->
 		<div class="player-area">
 			<!-- casillas de jugador y computadora -->
-			<div class="player-card">
-				<h2>Jugador</h2>
-				
-				<div id="player-choice" class="choice">
-					<img id="player-img" src="./img/Jugador.png" alt="" class="choice-img">
-				</div>
-
-				<div class="health-bar"> 
-					<div class="health-fill" id="health-player"></div>
-				</div>
+			<div class="casillas-play">
 				<div class="round-counter" id="player-rounds">Rondas ganadas: 0</div>
+				<div class="player-card">
+					<h2>Jugador</h2>
+					
+					<div id="player-choice" class="choice">
+						<img id="player-img" src="./img/Jugador.png" alt="" class="choice-img">
+					</div>
+
+					<div class="health-bar"> 
+						<div class="health-fill" id="health-player"></div>
+					</div>
+				</div>
 			</div>
 			
 			<!-- resultado -->
@@ -39,18 +41,19 @@
 				<h2>¡Haz tu jugada!</h2>
 			</div>
 			
-			
-			<div class="player-card">
-				<h2>Computadora</h2>
-				
-				<div id="computer-choice" class="choice">
-					<img id="computer-img" src="./img/Computer.png" alt="" class="choice-img">
-				</div>
-				
-				<div class="health-bar">
-					<div class="health-fill" id="health-computer"></div>
-				</div>
+			<div class="casillas-play">
 				<div class="round-counter" id="computer-rounds">Rondas ganadas: 0</div>
+				<div class="player-card">
+					<h2>Computadora</h2>
+					
+					<div id="computer-choice" class="choice">
+						<img id="computer-img" src="./img/Computer.png" alt="" class="choice-img">
+					</div>
+					
+					<div class="health-bar">
+						<div class="health-fill" id="health-computer"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -61,6 +64,7 @@
 			<button class="game-button" onclick="playerChoose('tijera')"><img src="./assets/Tijera.png" alt="Tijera"></button>
 		</div>
 
+		<!-- Botón de Nueva Partida -->
 		<div class="controls">
 			<button id="new-game-btn">Nueva Partida</button>
 		</div>
@@ -68,10 +72,10 @@
 
 
 		<!-- Para jugar online (opcional en la versión básica) -->
-		<div id="multiplayer-section" class="hidden">
+		<!-- <div id="multiplayer-section" class="hidden">
 			<h3>Esperando otro jugador...</h3>
 		</div>
-	</div>
+	</div> -->
 	
 	<script src="funcion.js"></script>
 </body>

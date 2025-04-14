@@ -4,29 +4,33 @@
 	box-sizing: border-box;
 	font-family: "Oswald", sans-serif;
 	font-weight: bold;
-
 }
+
+.title h1 {background-color: #2563eb;}
+.player-area {background-color: orange;}
+.buttons-area {background-color: #2563eb;}
+/* .controls {background-color: #8e929b;} */
+/* #result {background-color: #e5e7eb;} */
 
 body {
 	background-color: #1f2937;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: grid;
+	place-items: center;
 	height: 100vh;
 }
+
 .game-container {
 	background: #f9fafb;
 	display: grid;
-	grid-template-rows: 10vh 40vh 30vh;
+	grid-template-rows: 7vh 50vh 25vh 10vh;
 	text-align: center;
 	border-radius: 10px;
 	border: 3px solid #10b981;
 	box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 	padding: 20px;
-	height: 90vh;
+	height: 99vh;
 	width: 70%;
 }
-
 
 .title h1 {
 	font-family: "Bungee Spice", sans-serif;
@@ -34,13 +38,19 @@ body {
 	font-style: normal;
 }
 
-
 /*pantalla principal*/
 .player-area {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	background-color: yellowgreen;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	place-items: center;
+}
+
+/* Rondas ganadas */
+.round-counter {
+	font-weight: bold;
+	color: #1f2937;
+	font-size: 1.3rem;
+	margin-bottom: 15px;
 }
 
 /* casillas de jugador y computadora */
@@ -52,16 +62,19 @@ body {
 	border-radius: 8px;
 	width: 200px;
 	height: 250px;
-	background-color: #f2f2f2;
 	gap: 10px;
+	background-color: #f2f2f2;
+}
+.player-card h2 {
+	font-family: "Bungee Spice", sans-serif;
 }
 
+/* contenedor de imagen */
 .choice {
 	display: grid;
 	place-items: center;
 	height: 150px;
 	width: 150px;
-	/* margin-top: 20px; */
 	background-color: #e1e1e1;
 	border-radius: 8px;
 }
@@ -78,7 +91,6 @@ body {
 	background: #e5e7eb;
 	border-radius: 8px;
 	height: 20px;
-	/* margin-bottom: 15px; */
 	overflow: hidden;
 	border: 2px solid #9ca3af;
 }
@@ -100,24 +112,11 @@ body {
 	animation: blink-red 0.5s infinite;
 }
 
-.round-counter {
-	font-weight: bold;
-	margin-top: 10px;
-	color: #1f2937;
-	font-size: 1rem;
-}
-
 /* resultado */
 #result {
-	/* margin-top: 20px; */
-	font-size: 18px;
+	font-size: 1.5rem;
 	color: #333;
 }
-/* #result h2 {
-	font-family: "Bungee Spice", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-} */
 
 /*botones cartas*/
 .buttons-area {
@@ -125,31 +124,51 @@ body {
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
-	background-color: violet;
 }
+
 .game-button {
-	/* padding: 10px 20px; */
-	/* margin: 10px; */
 	border: none;
-	/* background-color: #4CAF50; */
 	color: white;
 	border-radius: 10px;
 	cursor: pointer;
 	transition: background-color 0.3s;
 }
+
 .game-button:hover {
 	background-color: #45a049;
 }
 
 .game-button img{
-	width: 120px;
+	width: 100px;
 }
 .game-button img:hover{
-	width: 130px;
+	width: 110px;
 }
 
+/* Botón de Nueva Partida */
+.controls {
+	display: grid;
+	place-items: center;
+	text-align: center;
+}
 
-#multiplayer-section {
+#new-game-btn {
+	padding: 10px 20px;
+	font-size: 16px;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	background-color: #2563eb;
+	transition: background-color 0.3s ease;
+}
+
+#new-game-btn:hover {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.815), blue, rgba(0, 0, 0, 0.815));
+}
+
+/* función para un jugador online */
+/* #multiplayer-section {
 	margin-top: 20px;
 	display: none;
 	background-color: #f9f9f9;
@@ -159,46 +178,8 @@ body {
 
 .hidden {
 	display: none;
-}
+} */
+
 /* boton de nueva partida */
-.controls {
-	margin-top: 20px;
-	text-align: center;
-}
-
-#new-game-btn {
-	padding: 10px 20px;
-	font-size: 16px;
-	background-color: #3b82f6;
-	color: white;
-	border: none;
-	border-radius: 8px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
-}
-
-#new-game-btn:hover {
-	background-color: #2563eb;
-}
 
 
-/* Responsive */
-@media (max-width: 768px) {
-	.player-area {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.player-card {
-		width: 80%;
-	}
-
-	.choice-img {
-		width: 100px;
-		height: 100px;
-	}
-
-	h1 {
-		font-size: 1.6rem;
-	}
-}
