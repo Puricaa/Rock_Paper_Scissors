@@ -130,21 +130,21 @@ function resetVisuals() {
 document.getElementById("new-game-btn").addEventListener("click", startNewGame);
 
 function startNewGame() {
-    // Restaurar vidas
-    playerHealth = 100;
-    computerHealth = 100;
+	// Restaurar vidas
+	playerHealth = 100;
+	computerHealth = 100;
 
-    // Restaurar rondas ganadas
-    playerRounds = 0;
-    computerRounds = 0;
+	// Restaurar rondas ganadas
+	playerRounds = 0;
+	computerRounds = 0;
 
-    // Actualizar UI
-    updateHealthBars();
-    updateRoundCounters();
-    resetVisuals();
+	// Actualizar UI
+	updateHealthBars();
+	updateRoundCounters();
+	resetVisuals();
 
-    // Mensaje de estado
-    document.getElementById('result').innerHTML = '🎮 ¡Nueva partida iniciada! Elige tu jugada.';
+	// Mensaje de estado
+	document.getElementById('result').innerHTML = '🎮 ¡Nueva partida iniciada! Elige tu jugada.';
 }
 
 
