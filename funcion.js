@@ -43,42 +43,42 @@ function displayResult() {
 	let resultMessage = '';
 
 	if (playerChoice === computerChoice) {
-			resultMessage = '¡Empate!';
-			playerCard.classList.add('tie');
-			computerCard.classList.add('tie');
+		resultMessage = '¡Empate!';
+		playerCard.classList.add('tie');
+		computerCard.classList.add('tie');
 	} else if (
-			(playerChoice === 'piedra' && computerChoice === 'tijera') ||
-			(playerChoice === 'papel' && computerChoice === 'piedra') ||
-			(playerChoice === 'tijera' && computerChoice === 'papel')
+		(playerChoice === 'piedra' && computerChoice === 'tijera') ||
+		(playerChoice === 'papel' && computerChoice === 'piedra') ||
+		(playerChoice === 'tijera' && computerChoice === 'papel')
 	) {
-			resultMessage = '¡Ganaste!';
-			playerCard.classList.add('winner');
-			computerCard.classList.add('loser');
-			computerHealth = Math.max(computerHealth - 20, 0);
+		resultMessage = '¡Ganaste!';
+		playerCard.classList.add('winner');
+		computerCard.classList.add('loser');
+		computerHealth = Math.max(computerHealth - 20, 0);
 	} else {
-			resultMessage = 'Perdiste...';
-			playerCard.classList.add('loser');
-			computerCard.classList.add('winner');
-			playerHealth = Math.max(playerHealth - 20, 0);
+		resultMessage = 'Perdiste...';
+		playerCard.classList.add('loser');
+		computerCard.classList.add('winner');
+		playerHealth = Math.max(playerHealth - 20, 0);
 	}
 
 	updateHealthBars();
 
 	if (playerHealth === 0 || computerHealth === 0) {
-			setTimeout(() => {
-					let finalMessage;
-					if (playerHealth === 0) {
-							finalMessage = '¡Perdiste la ronda!';
-							computerRounds++;
-					} else {
-							finalMessage = '¡Ganaste la ronda!';
-							playerRounds++;
-					}
+		setTimeout(() => {
+			let finalMessage;
+			if (playerHealth === 0) {
+				finalMessage = '¡Perdiste la ronda!';
+				computerRounds++;
+			} else {
+				finalMessage = '¡Ganaste la ronda!';
+				playerRounds++;
+			}
 
-					updateRoundCounters();
-					alert(finalMessage);
-					startNextRound(); // ← Reinicia solo la ronda, no el juego completo
-			}, 600);
+			updateRoundCounters();
+			alert(finalMessage);
+			startNextRound(); // ← Reinicia solo la ronda, no el juego completo
+		}, 600);
 	}
 
 	document.getElementById('result').innerHTML = `<h2>${resultMessage}</h2>`;
@@ -130,21 +130,21 @@ function resetVisuals() {
 document.getElementById("new-game-btn").addEventListener("click", startNewGame);
 
 function startNewGame() {
-    // Restaurar vidas
-    playerHealth = 100;
-    computerHealth = 100;
+	// Restaurar vidas
+	playerHealth = 100;
+	computerHealth = 100;
 
-    // Restaurar rondas ganadas
-    playerRounds = 0;
-    computerRounds = 0;
+	// Restaurar rondas ganadas
+	playerRounds = 0;
+	computerRounds = 0;
 
-    // Actualizar UI
-    updateHealthBars();
-    updateRoundCounters();
-    resetVisuals();
+	// Actualizar UI
+	updateHealthBars();
+	updateRoundCounters();
+	resetVisuals();
 
-    // Mensaje de estado
-    document.getElementById('result').innerHTML = '🎮 ¡Nueva partida iniciada! Elige tu jugada.';
+	// Mensaje de estado
+	document.getElementById('result').innerHTML = '🎮 ¡Nueva partida iniciada! Elige tu jugada.';
 }
 
 
