@@ -6,7 +6,7 @@
 	font-weight: bold;
 }
 
-.title h1 {background-color: #2563eb;}
+.title {background-color: #2563eb;}
 .player-area {background-color: orange;}
 .buttons-area {background-color: #2563eb;}
 /* .controls {background-color: #8e929b;} */
@@ -181,5 +181,8 @@ body {
 } */
 
 /* boton de nueva partida */
+
+
+/* Responsive */
 
 
